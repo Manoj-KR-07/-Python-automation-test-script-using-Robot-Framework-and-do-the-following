@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-02-16T06:26:24.819996" rpa="false" schemaversion="5">
+<suite id="s1" name="TC1" source="C:\Users\admin\PycharmProjects\automation\testcases\TC1.robot">
+<test id="s1-t1" name="Capture IP Address" line="6">
+<kw name="Run DOS Command">
+<kw name="Run Process" owner="Process">
+<msg time="2025-02-16T06:26:25.020884" level="INFO">Starting process:
+cmd.exe /C "ipconfig | findstr \"IPv4\""</msg>
+<msg time="2025-02-16T06:26:25.028877" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-02-16T06:26:25.169797" level="INFO">Process completed.</msg>
+<arg>cmd.exe</arg>
+<arg>/C</arg>
+<arg>${command}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-02-16T06:26:25.018888" elapsed="0.150909"/>
+</kw>
+<arg>ipconfig | findstr "IPv4"</arg>
+<status status="PASS" start="2025-02-16T06:26:25.014885" elapsed="0.155912"/>
+</kw>
+<kw name="Run And Return Rc And Output" owner="OperatingSystem">
+<msg time="2025-02-16T06:26:25.179792" level="INFO">Running command 'ipconfig | findstr "IPv4" 2&gt;&amp;1'.</msg>
+<msg time="2025-02-16T06:26:25.263743" level="INFO">${output} = (0, '   IPv4 Address. . . . . . . . . . . : 192.168.56.1\n   IPv4 Address. . . . . . . . . . . : 192.168.29.159')</msg>
+<var>${output}</var>
+<arg>ipconfig | findstr "IPv4"</arg>
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<status status="PASS" start="2025-02-16T06:26:25.171798" elapsed="0.092945"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-16T06:26:25.265742" level="INFO">(0, '   IPv4 Address. . . . . . . . . . . : 192.168.56.1\n   IPv4 Address. . . . . . . . . . . : 192.168.29.159')</msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-16T06:26:25.264743" elapsed="0.001999"/>
+</kw>
+<status status="PASS" start="2025-02-16T06:26:25.010887" elapsed="0.256859"/>
+</test>
+<status status="PASS" start="2025-02-16T06:26:24.830990" elapsed="0.439749"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC1" id="s1" pass="1" fail="0" skip="0">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
