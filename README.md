@@ -1,2 +1,2 @@
-# -Python-automation-test-script-using-Robot-Framework-and-do-the-following
+# Python-automation-test-script-using-Robot-Framework.
 Automation test Script Discription
